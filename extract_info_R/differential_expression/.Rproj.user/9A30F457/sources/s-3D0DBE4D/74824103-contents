@@ -1,0 +1,36 @@
+# Takes ~40 min if read from cluster
+## Malignant cells
+
+dat <- readRDS("/Users/ryanyutian/Desktop/h4h/projects/OICR_Brain_LRWGS/NucSeqData/20210715_MalignantCells_seurat.rds")
+
+format(Sys.time(), "%H:%M:%S") 
+
+write.csv(x=dat@meta.data, file="/Users/ryanyutian/Desktop/NucSeq_data/meta_data.csv", row.names = TRUE)
+
+# Cannot save sparse matrix into csv file
+# write.csv(x=dat@assays$RNA@data, file="/Users/ryanyutian/Desktop/NucSeq_data/expression.csv", row.names = TRUE)
+
+# Takes ~20 min
+library('Matrix')
+writeMM(obj = dat@assays$RNA@data, file="/Users/ryanyutian/Desktop/NucSeq_data/expression.mtx")
+
+format(Sys.time(), "%H:%M:%S") 
+
+write.csv(x=dat@assays$RNA@data@Dimnames[1], file="/Users/ryanyutian/Desktop/NucSeq_data/RNA_names.csv", row.names = FALSE)
+
+write.csv(x=dat@assays$RNA@data@Dimnames[2], file="/Users/ryanyutian/Desktop/NucSeq_data/cell_names.csv", row.names = FALSE)
+
+sparse_mat_check <- readMM("/Users/ryanyutian/Desktop/NucSeq_data/expression.mtx")
+
+
+## Non-malignant cells
+dat_nm <- readRDS("/Users/ryanyutian/Desktop/h4h/projects/OICR_Brain_LRWGS/NucSeqData/20210715_NonmalignantCells_seurat.rds")
+
+write.csv(x=dat_nm@meta.data, file="/Users/ryanyutian/Desktop/NucSeq_data/non_malignant/meta_data.csv", row.names = TRUE)
+
+library('Matrix')
+writeMM(obj = dat_nm@assays$RNA@data, file="/Users/ryanyutian/Desktop/NucSeq_data/non_malignant/expression.mtx")
+
+write.csv(x=dat_nm@assays$RNA@data@Dimnames[1], file="/Users/ryanyutian/Desktop/NucSeq_data/non_malignant/RNA_names.csv", row.names = FALSE)
+
+write.csv(x=dat_nm@assays$RNA@data@Dimnames[2], file="/Users/ryanyutian/Desktop/NucSeq_data/non_malignant/cell_names.csv", row.names = FALSE)

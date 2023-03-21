@@ -1,0 +1,28 @@
+{
+    "id": "C9746D4B",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1651550532774.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "id": "0cab43ca304e46b486ecf19237154dd7",
+        "name": "temp_sample",
+        "title": "temp_sample",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 435761734006,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1651550532774,
+    "read_only": false,
+    "read_only_alternatives": []
+}

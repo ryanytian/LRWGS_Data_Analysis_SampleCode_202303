@@ -1,0 +1,26 @@
+{
+    "id": "807E10F1",
+    "path": "~/Documents/GitHub/TRI_Brain_LRWGS/R/differential_expression/diff_exp_mal_cross_sample.R",
+    "project_path": "diff_exp_mal_cross_sample.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1651273760271.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "26,39",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1651529248,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1651529248464,
+    "read_only": false,
+    "read_only_alternatives": []
+}
